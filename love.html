@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=gb2312">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+		.pics {      height:  232px;      width:   232px;      padding: 0;      margin:  0;  }  .pics img {      padding: 15px;      border:  1px solid #ccc;      background-color: #eee;      width:  200px;     height: 200px;     top:  0;     left: 0 } 
+		
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+
+    <script type="text/javascript" src="js/functions.js"></script>
+	<script  type="text/javascript">
+		$('#s1').cycle('fade');
+	</script>
+</head>
+
+<body>
+<audio id="music" src="My Love.mp3" autoplay></audio>
+	<div id="mainDiv">
+		<div id="content">
+		<!--
+			<div id="code" style="margin-top: 0px;background-image:url('');font-weight:50px;font-size:20px;">
+		-->
+		<div id="code" style="font-size:15px;">
+				故事从微博上的聊天开始
+				<br/>
+				7天之后厚着脸，终于把Ariel—Ji邀请出来到厦大经典的约会地点——情人谷，
+				没有人会想到，第一眼见到Ariel_Ji，心里荡漾了一下。
+				<br/>
+				<br/>
+				我们在一起快两个月了。Ariel_Ji有乐不完的事情跟我说，我们每天都很开心。
+				<br/>
+				<br/>
+				我们也是有曲折的，比如前一段时间还冷战了，-_-!!
+				<br/>
+				<br/>
+				不过每一次的冷战，都让我们的感情更加深厚了
+				<br/>
+				<br/>
+				Ariel_Ji每天都会说我对她不好
+				<br/>
+				或者，我一点都不关心她
+				<br/>
+				<br/>
+				...
+				<br/>
+				
+				可爱、善良、美丽、贤良淑德的女人呐，怎么可以不去关心？
+				<br/>
+				<br/>
+				我们还有很多未完成的事，看日出，听海的声音...
+				<br/>
+				以及过每一个平凡普通的日子
+				<br/>
+				只要是和Ariel_Ji在一起，做任何事情都是快乐的
+				<br/>
+				<br/>
+				Ariel_Ji，就要毕业了，
+				希望未来，快乐或者悲伤，我们可以一起面对。
+			</div>
+			
+			<div id="loveHeart">
+				<ul id="box">
+					<li><a href="#"><img id="pics" src="images/start.jpg" width="50%" height="50%" style="position:absolute;top:3%;right:3%;z-index:-3;border:0"/></a></li>
+				</ul>
+				
+				<canvas id="garden"></canvas>
+				
+				<div id="words">
+					<div id="messages">
+						
+					</div>
+					<div id="loveu">
+						Love u forever and ever.<br/>
+						<div class="signature">- chenwq</div>
+					</div>
+				</div>
+				
+				
+			</div>
+			
+		</div>
+		<div id="copyright">
+			Copyright ? 2012 <a href='http://www.linkedin.com/pub/chen-wenqiang/4b/424/290'>chenwq@linkedin</a> 2011-2012
+		</div>
+
+	</div>
+	
+	<div id="loading" style="display:none;position:fixed !important;position:absolute;top:0;left:0;height:100%; width:100%; z-index:999; background:#000 url(images/we.PNG) no-repeat center center; opacity:0.6; filter:alpha(opacity=60);font-size:20px;line-height:20px;">     
+		Love will go on,
+		I will remain to fight for your heart!
+	</div> 
+
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2010, 10, 2);
+		together.setHours(20);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+				
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 200000);
+
+			timeElapse(together);
+			setInterval(function () {
+				
+				timeElapse(together);
+			}, 100);
+			
+			setTimeout(function(){
+				$("#pics").attr("src", "images/shuiku.jpg");
+				//$("#pics").css("display", "none")
+				}
+			, 10000);
+			
+			setTimeout(function(){
+				$("#pics").attr("src", "images/sad.jpg");
+				//$("#pics").css("display", "none")
+				}
+			, 20000);
+			
+			setTimeout(function(){
+				
+				$("#pics").css("visibility", "hidden")
+				}
+			, 170000);
+			
+			setTimeout(function(){
+				
+				$("#loading").css("display", "");
+					
+				var music = document.getElementById("music");
+				
+				music.pause();
+				
+				}
+				
+			, 232000);
+			
+			adjustCodePosition();
+			$("#code").typewriter();
+			$('#s5').cycle({    fx:    'shuffle',     delay: -4000  });
+		}
+	</script>
+</body>
+</html>
