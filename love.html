@@ -15,10 +15,18 @@
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
 	<script type="text/javascript" src="js/garden.js"></script>
+	<link type="text/css" href="css/css3.css" rel="stylesheet" />
+	<script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+	<script type="text/javascript" src="js/jquery.pikachoose.min.js"></script>
 
     <script type="text/javascript" src="js/functions.js"></script>
 	<script  type="text/javascript">
 		$('#s1').cycle('fade');
+		$(document).ready(
+			function (){
+				$("#pikame").PikaChoose();
+			});
 	</script>
 </head>
 
@@ -87,6 +95,14 @@
 				
 			</div>
 			
+			<div class="pikachoose">
+			Styled without images. Pure CSS.
+				<ul id="pikame" >
+						<li><a href="http://www.pikachoose.com"><img src="images/start.jpg"/></a><span>This is an example of the basic theme.</span></li>
+								<li><a href="http://www.pikachoose.com"><img src="images/start.jpg"/></a><span>jCarousel is supported and can be integrated with PikaChoose!</span></li>
+										<li><a href="http://www.pikachoose.com"><img src="images/start.jpg"/></a><span>Be sure to check out <a href="http://www.pikachoose.com">PikaChoose.com</a> for updates.</span></li>
+											</ul>
+											</div>
 		</div>
 		<div id="copyright">
 			Copyright ? 2012 <a href='http://www.linkedin.com/pub/chen-wenqiang/4b/424/290'>chenwq@linkedin</a> 2011-2012
