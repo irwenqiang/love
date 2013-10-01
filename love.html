@@ -38,9 +38,6 @@
 <audio id="music" src="love_mail.mp3" autoplay></audio>
 	<div id="mainDiv">
 		<div id="content">
-		<!--
-			<div id="code" style="margin-top: 0px;background-image:url('');font-weight:50px;font-size:20px;">
-		-->	
 		<div id="code" style="font-size:15px;">
 				故事从微博上的聊天开始
 				<br/>
@@ -85,7 +82,7 @@
 					<li><img src="images/shuiku_meitu_2.jpg" ></li>
 					<li><img src="images/sad_meitu_3.jpg" ></li>
 				</ul>
-				
+	
 				<canvas id="garden"></canvas>
 				
 				<div id="words">
@@ -97,12 +94,7 @@
 						<div class="signature">- chenwq</div>
 					</div>
 				</div>
-				
-				
 			</div>
-			
-			
-			
 		</div>
 		<div id="copyright">
 			Copyright @ 2012 <a href='http://weibo.com/605506205'>chenwq@weibo</a> 2011-2012
@@ -125,8 +117,6 @@
 		together.setSeconds(0);
 		together.setMilliseconds(0);
 		
-		
-		
 		if (!document.createElement('canvas').getContext) {
 			var msg = document.createElement("div");
 			msg.id = "errorMsg";
@@ -141,6 +131,10 @@
 			setTimeout(function () {
 				startHeartAnimation();
 			}, 180000);
+			
+			setTimeout(function () {
+				$("#box").css("display", "none");
+			}, 170000);
 
 			timeElapse(together);
 			setInterval(function () {
@@ -149,35 +143,18 @@
 			}, 100);
 			
 			setTimeout(function(){
-				$("#pics").attr("src", "images/shuiku.jpg");
-				//$("#pics").css("display", "none")
-				}
-			, 10000);
-			
-			setTimeout(function(){
-				$("#pics").attr("src", "images/sad.jpg");
-				//$("#pics").css("display", "none")
-				}
-			, 20000);
-			
-			setTimeout(function(){
-				
 				$("#pics").css("visibility", "hidden")
 				}
 			, 170000);
 			
 			setTimeout(function(){
 				
-				$("#loading").css("display", "");	
-				$("#box").css("display","none");
-				$("#code").css("display", "none");
+				$("#loading").css("display", "");
 				var music = document.getElementById("music");
-				
 				music.pause();
-				
 				}
 				
-			, 232000);
+			, 1850000);
 			
 			adjustCodePosition();
 			$("#code").typewriter();
