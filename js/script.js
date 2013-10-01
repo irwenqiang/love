@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	$(".diaporama1").jDiaporama({
+	$("#box").jDiaporama({
 		animationSpeed: "slow",
 		delay:2
 	});
